@@ -1,0 +1,11 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/PaymentServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/application/PaymentResponse.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/application/PaymentService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/domain/PaymentStatus.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/config/RabbitConfig.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/entity/PaymentEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/entity/ProcessedEventEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/messaging/OrderCreatedListener.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/repository/PaymentRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/repository/ProcessedEventRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/payment-service/src/main/java/com/verduritas/payment/infrastructure/web/PaymentController.java

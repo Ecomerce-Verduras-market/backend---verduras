@@ -1,0 +1,37 @@
+server:
+  port: ${SERVER_PORT:8081}
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5439/verduritas_db?currentSchema=auth_service}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:rroot}
+  jpa:
+    hibernate:
+      ddl-auto: ${JPA_DDL_AUTO:validate}
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
+    baseline-on-migrate: ${FLYWAY_BASELINE_ON_MIGRATE:true}
+    schemas: ${DB_SCHEMA:auth_service}
+
+security:
+  jwt:
+    secret: ${JWT_SECRET:change-this-secret-with-at-least-32-chars}
+    expiration-minutes: ${JWT_EXPIRATION_MINUTES:120}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

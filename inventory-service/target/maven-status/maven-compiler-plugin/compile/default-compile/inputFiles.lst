@@ -1,0 +1,12 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/InventoryServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/application/InventoryResponse.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/application/InventoryService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/application/UpsertStockRequest.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/domain/InventoryItem.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/config/RabbitConfig.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/entity/InventoryItemEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/entity/ProcessedEventEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/messaging/OrderCreatedListener.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/repository/InventoryRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/repository/ProcessedEventRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/inventory-service/src/main/java/com/verduritas/inventory/infrastructure/web/InventoryController.java

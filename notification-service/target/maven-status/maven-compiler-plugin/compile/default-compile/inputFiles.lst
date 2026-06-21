@@ -1,0 +1,4 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/notification-service/src/main/java/com/verduritas/notification/NotificationServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/notification-service/src/main/java/com/verduritas/notification/application/NotificationService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/notification-service/src/main/java/com/verduritas/notification/infrastructure/config/RabbitConfig.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/notification-service/src/main/java/com/verduritas/notification/infrastructure/messaging/CommerceEventListener.java

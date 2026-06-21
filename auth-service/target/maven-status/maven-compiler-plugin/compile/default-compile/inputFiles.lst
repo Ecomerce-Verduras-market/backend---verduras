@@ -1,0 +1,12 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/AuthServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/application/AuthResponse.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/application/AuthService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/application/LoginRequest.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/application/RegisterRequest.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/domain/AuthUser.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/config/SecurityConfig.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/entity/AuthUserEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/repository/AuthUserRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/security/JwtService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/web/AuthController.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/src/main/java/com/verduritas/auth/infrastructure/web/GlobalExceptionHandler.java

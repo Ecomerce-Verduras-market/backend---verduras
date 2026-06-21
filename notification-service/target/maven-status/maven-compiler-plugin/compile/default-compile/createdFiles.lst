@@ -1,0 +1,4 @@
+com/verduritas/notification/infrastructure/messaging/CommerceEventListener.class
+com/verduritas/notification/application/NotificationService.class
+com/verduritas/notification/infrastructure/config/RabbitConfig.class
+com/verduritas/notification/NotificationServiceApplication.class

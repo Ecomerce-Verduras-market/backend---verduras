@@ -1,0 +1,194 @@
+-------------------------------------------------------------------------------
+Test set: com.verduritas.auth.infrastructure.web.AuthControllerIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.321 s <<< FAILURE! -- in com.verduritas.auth.infrastructure.web.AuthControllerIntegrationTest
+com.verduritas.auth.infrastructure.web.AuthControllerIntegrationTest.registersAndLogsInUser -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@7097d921 testClass = com.verduritas.auth.infrastructure.web.AuthControllerIntegrationTest, locations = [], classes = [com.verduritas.auth.AuthServiceApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [PropertySourceDescriptor[locations=[], ignoreResourceNotFound=false, name=null, propertySourceFactory=null, encoding=null]], propertySourceProperties = ["spring.datasource.url=jdbc:h2:mem:auth_test;MODE=PostgreSQL;DB_CLOSE_DELAY=-1", "spring.datasource.driver-class-name=org.h2.Driver", "spring.datasource.username=sa", "spring.datasource.password=", "spring.jpa.hibernate.ddl-auto=create-drop", "eureka.client.enabled=false", "spring.cloud.discovery.enabled=false", "security.jwt.secret=test-secret-value-with-at-least-32-chars", "org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [[ImportsContextCustomizer@6247c08c key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@676cf48, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@73194df, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5443d039, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@6c0d9d86, org.springframework.boot.test.autoconfigure.OnFailureConditionReportContextCustomizerFactory$OnFailureConditionReportContextCustomizer@1f3f02ee, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@503ecb24, org.springframework.boot.test.context.SpringBootTestAnnotation@3d56a217], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:130)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260)
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735)
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762)
+	at java.base/java.util.Optional.orElseGet(Optional.java:364)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2__seed_auth_users.sql failed
+----------------------------------------
+SQL State  : 42000
+Error Code : 42000
+Message    : Syntax error in SQL statement "INSERT INTO auth_users (id, email, password_hash, created_at)\000aVALUES\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())\000a[*]ON CONFLICT (email) DO UPDATE SET\000a    password_hash = EXCLUDED.password_hash"; SQL statement:
+INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash [42000-224]
+Location   : db/migration/V2__seed_auth_users.sql (/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/target/classes/db/migration/V2__seed_auth_users.sql)
+Line       : 1
+Statement  : INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58)
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46)
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463)
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152)
+	... 17 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Migration V2__seed_auth_users.sql failed
+----------------------------------------
+SQL State  : 42000
+Error Code : 42000
+Message    : Syntax error in SQL statement "INSERT INTO auth_users (id, email, password_hash, created_at)\000aVALUES\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())\000a[*]ON CONFLICT (email) DO UPDATE SET\000a    password_hash = EXCLUDED.password_hash"; SQL statement:
+INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash [42000-224]
+Location   : db/migration/V2__seed_auth_users.sql (/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/target/classes/db/migration/V2__seed_auth_users.sql)
+Line       : 1
+Statement  : INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313)
+	... 32 more
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2__seed_auth_users.sql failed
+----------------------------------------
+SQL State  : 42000
+Error Code : 42000
+Message    : Syntax error in SQL statement "INSERT INTO auth_users (id, email, password_hash, created_at)\000aVALUES\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())\000a[*]ON CONFLICT (email) DO UPDATE SET\000a    password_hash = EXCLUDED.password_hash"; SQL statement:
+INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash [42000-224]
+Location   : db/migration/V2__seed_auth_users.sql (/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/target/classes/db/migration/V2__seed_auth_users.sql)
+Line       : 1
+Statement  : INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:382)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:272)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:271)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:244)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:139)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:36)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:55)
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:31)
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:102)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:145)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:139)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:97)
+	at org.flywaydb.core.Flyway.lambda$migrate$0(Flyway.java:202)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:205)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:147)
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 39 more
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Migration V2__seed_auth_users.sql failed
+----------------------------------------
+SQL State  : 42000
+Error Code : 42000
+Message    : Syntax error in SQL statement "INSERT INTO auth_users (id, email, password_hash, created_at)\000aVALUES\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())\000a[*]ON CONFLICT (email) DO UPDATE SET\000a    password_hash = EXCLUDED.password_hash"; SQL statement:
+INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash [42000-224]
+Location   : db/migration/V2__seed_auth_users.sql (/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/auth-service/target/classes/db/migration/V2__seed_auth_users.sql)
+Line       : 1
+Statement  : INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:252)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:214)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:133)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:65)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:57)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:27)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:56)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:374)
+	... 57 more
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO auth_users (id, email, password_hash, created_at)\000aVALUES\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),\000a    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())\000a[*]ON CONFLICT (email) DO UPDATE SET\000a    password_hash = EXCLUDED.password_hash"; SQL statement:
+INSERT INTO auth_users (id, email, password_hash, created_at)
+VALUES
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1', 'admin@verduritas.test', '$2b$10$s5cl4eqBEyfLVzb3dTfs7O4sHCsP47ORLyZYCB2Evj5Dxekv14KAG', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2', 'seller@verduritas.test', '$2b$10$1R5oK3Yvxr4X8qQdeDB1o.uzebVO6R41Azqlntp0qECuRQYRv9D4i', now()),
+    ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3', 'cliente@verduritas.test', '$2b$10$dQQrXTsvgBmmFlQUuCJ7fu/uLck/CS35L9mEHzgqqHMNbSKgcd8Ui', now())
+ON CONFLICT (email) DO UPDATE SET
+    password_hash = EXCLUDED.password_hash [42000-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.getSyntaxError(DbException.java:247)
+	at org.h2.command.ParserBase.getSyntaxError(ParserBase.java:748)
+	at org.h2.command.Parser.prepareCommand(Parser.java:486)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:210)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:89)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:206)
+	... 63 more
+

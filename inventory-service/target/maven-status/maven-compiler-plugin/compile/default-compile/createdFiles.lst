@@ -1,0 +1,12 @@
+com/verduritas/inventory/infrastructure/messaging/OrderCreatedListener.class
+com/verduritas/inventory/infrastructure/repository/InventoryRepository.class
+com/verduritas/inventory/infrastructure/repository/ProcessedEventRepository.class
+com/verduritas/inventory/infrastructure/entity/InventoryItemEntity.class
+com/verduritas/inventory/InventoryServiceApplication.class
+com/verduritas/inventory/application/InventoryService.class
+com/verduritas/inventory/infrastructure/web/InventoryController.class
+com/verduritas/inventory/application/InventoryResponse.class
+com/verduritas/inventory/application/UpsertStockRequest.class
+com/verduritas/inventory/domain/InventoryItem.class
+com/verduritas/inventory/infrastructure/entity/ProcessedEventEntity.class
+com/verduritas/inventory/infrastructure/config/RabbitConfig.class

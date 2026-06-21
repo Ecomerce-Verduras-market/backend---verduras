@@ -1,0 +1,3 @@
+com/verduritas/shared/events/OrderCreatedEvent.class
+com/verduritas/shared/events/PaymentProcessedEvent.class
+com/verduritas/shared/events/StockUpdatedEvent.class

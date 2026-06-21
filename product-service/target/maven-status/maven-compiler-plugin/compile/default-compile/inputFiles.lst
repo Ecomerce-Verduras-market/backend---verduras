@@ -1,0 +1,9 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/ProductServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/application/CreateProductRequest.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/application/ProductResponse.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/application/ProductService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/domain/Product.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/infrastructure/entity/ProductEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/infrastructure/repository/ProductRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/infrastructure/web/GlobalExceptionHandler.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/product-service/src/main/java/com/verduritas/product/infrastructure/web/ProductController.java

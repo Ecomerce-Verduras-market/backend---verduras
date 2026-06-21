@@ -1,0 +1,10 @@
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/OrderServiceApplication.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/application/CreateOrderRequest.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/application/OrderResponse.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/application/OrderService.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/domain/OrderStatus.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/infrastructure/config/RabbitConfig.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/infrastructure/entity/OrderEntity.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/infrastructure/repository/OrderRepository.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/infrastructure/web/GlobalExceptionHandler.java
+/home/vdiaz/Escritorio/practica Inka/PROYECTOS/ecomerce -verduritas/backend---verduras/order-service/src/main/java/com/verduritas/order/infrastructure/web/OrderController.java
